@@ -1,0 +1,20 @@
+<form [formGroup]="profileForm">
+  <clr-input-container>
+    <label>Room name:</label>
+    <input clrInput type="text" formControlName="roomName"  />
+    <clr-control-error>Required</clr-control-error>
+  </clr-input-container>
+  <clr-input-container>
+    <label> Number of rows:</label>
+    <input clrInput type="number" formControlName="numberOfRows"  />
+    <clr-control-error>Must be 1 or more</clr-control-error>
+  </clr-input-container>
+  <clr-input-container>
+    <label> Average number of seats per row:</label>
+    <input clrInput type="number" formControlName="average"  />
+  </clr-input-container>
+  <button type="submit" [disabled]="!profileForm.valid">
+    <clr-icon shape="check"></clr-icon>
+    SAVE ROOM
+  </button>
+</form>
